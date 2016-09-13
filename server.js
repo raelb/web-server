@@ -1,15 +1,7 @@
 
 var express = require('express');
 var app = express();
-var moment = require('moment');
-
-var middleware = {
-	logger: function(req, res, next){
-		console.log('Request: [' + moment().format('YYYY-MM-DD hh:mm') + '] ' + 
-			req.method + ' ' + req.originalUrl);
-		next();
-	}
-};
+var middleware = require('./middleware');
 
 app.use(middleware.logger);
 app.use(express.static(__dirname + '/public'));

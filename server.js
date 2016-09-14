@@ -24,7 +24,6 @@ app.get('/data', function(req, res){
 	res.send(data);
 });
 
-// some comment
 //console.log(__dirname);
 app.listen(3000);
 console.log('Server started on port 3000');

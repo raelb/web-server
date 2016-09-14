@@ -16,8 +16,8 @@ app.get('/info', function(req, res){
 });
 
 var data = {
-	name: 'Rael',
-	age: 41
+	name: 'John',
+	age: 40
 };
 
 app.get('/data', function(req, res){

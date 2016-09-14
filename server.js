@@ -2,6 +2,7 @@
 var express = require('express');
 var app = express();
 var middleware = require('./middleware');
+var PORT = process.env.PORT || 3000;
 
 app.use(middleware.logger);
 app.use(express.static(__dirname + '/public'));
@@ -25,5 +26,5 @@ app.get('/data', function(req, res){
 });
 
 //console.log(__dirname);
-app.listen(3000);
-console.log('Server started on port 3000');
+app.listen(PORT);
+console.log('Server started on port ' + PORT);

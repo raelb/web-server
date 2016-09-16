@@ -20,7 +20,13 @@ var data = {
 	age: 40
 };
 
+// --- send back JSON ---
 app.get('/data', function(req, res){
+	res.setHeader('Access-Control-Allow-Origin','*');
+	res.send(data);
+});
+
+app.post('/data', function(req, res){
 	res.setHeader('Access-Control-Allow-Origin','*');
 	res.send(data);
 });
